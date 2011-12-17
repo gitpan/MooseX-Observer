@@ -25,4 +25,4 @@ requires:
 resources:
   bugtracker: https://github.com/tmueller/MooseX-Observer/issues
   repository: git://github.com/tmueller/MooseX-Observer.git
-version: 0.005
+version: 0.006
