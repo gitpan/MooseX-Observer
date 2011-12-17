@@ -14,7 +14,6 @@ my %WriteMakefileArgs = (
   "BUILD_REQUIRES" => {
     "Moose" => 0,
     "Test::More" => 0,
-    "TestParent" => 0,
     "strict" => 0,
     "warnings" => 0
   },
@@ -32,7 +31,7 @@ my %WriteMakefileArgs = (
     "MooseX::Role::Parameterized" => 0,
     "MouseX::NativeTraits" => 0
   },
-  "VERSION" => "0.004",
+  "VERSION" => "0.005",
   "test" => {
     "TESTS" => "t/*.t"
   }

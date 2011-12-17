@@ -5,7 +5,6 @@ author:
 build_requires:
   Moose: 0
   Test::More: 0
-  TestParent: 0
   strict: 0
   warnings: 0
 configure_requires:
@@ -26,4 +25,4 @@ requires:
 resources:
   bugtracker: https://github.com/tmueller/MooseX-Observer/issues
   repository: git://github.com/tmueller/MooseX-Observer.git
-version: 0.004
+version: 0.005
