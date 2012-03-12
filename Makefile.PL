@@ -28,10 +28,9 @@ my %WriteMakefileArgs = (
     "List::MoreUtils" => 0,
     "Moose::Role" => 0,
     "Moose::Util::TypeConstraints" => 0,
-    "MooseX::Role::Parameterized" => 0,
-    "MouseX::NativeTraits" => 0
+    "MooseX::Role::Parameterized" => 0
   },
-  "VERSION" => "0.006",
+  "VERSION" => "0.007",
   "test" => {
     "TESTS" => "t/*.t"
   }
