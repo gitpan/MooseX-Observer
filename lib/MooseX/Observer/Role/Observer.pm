@@ -1,6 +1,6 @@
 package MooseX::Observer::Role::Observer;
 {
-  $MooseX::Observer::Role::Observer::VERSION = '0.008';
+  $MooseX::Observer::Role::Observer::VERSION = '0.009';
 }
 # ABSTRACT: Tags a Class as being an Observer
 use Moose::Role;
@@ -17,7 +17,7 @@ MooseX::Observer::Role::Observer - Tags a Class as being an Observer
 
 =head1 VERSION
 
-version 0.008
+version 0.009
 
 =head1 SYNOPSIS
 

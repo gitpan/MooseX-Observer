@@ -11,13 +11,7 @@ use ExtUtils::MakeMaker 6.30;
 my %WriteMakefileArgs = (
   "ABSTRACT" => "Simple Moose-Roles to implement the Observer Pattern",
   "AUTHOR" => "Thomas M\374ller <tmueller\@cpan.org>",
-  "BUILD_REQUIRES" => {
-    "Counter::Role" => 0,
-    "Moose" => 0,
-    "Test::More" => 0,
-    "strict" => 0,
-    "warnings" => 0
-  },
+  "BUILD_REQUIRES" => {},
   "CONFIGURE_REQUIRES" => {
     "ExtUtils::MakeMaker" => "6.30"
   },
@@ -26,12 +20,14 @@ my %WriteMakefileArgs = (
   "LICENSE" => "perl",
   "NAME" => "MooseX::Observer",
   "PREREQ_PM" => {
-    "List::MoreUtils" => 0,
-    "Moose::Role" => 0,
-    "Moose::Util::TypeConstraints" => 0,
-    "MooseX::Role::Parameterized" => 0
+    "List::MoreUtils" => "0.33",
+    "Moose" => "2.0603",
+    "MooseX::Role::Parameterized" => "1.00",
+    "Test::More" => "0.98",
+    "strict" => 0,
+    "warnings" => 0
   },
-  "VERSION" => "0.008",
+  "VERSION" => "0.009",
   "test" => {
     "TESTS" => "t/*.t"
   }
