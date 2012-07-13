@@ -1,6 +1,6 @@
 package MooseX::Observer::Role::Observable;
 {
-  $MooseX::Observer::Role::Observable::VERSION = '0.007';
+  $MooseX::Observer::Role::Observable::VERSION = '0.008';
 }
 # ABSTRACT: Adds methods an logic to a class, enabling instances changes to be observed
 
@@ -41,20 +41,31 @@ role {
     );
 
     for my $methodname (@{ $notifications_after }) {
-        if ($consumer->find_attribute_by_name($methodname)) {
+        if ( $consumer->isa('Class::MOP::Class') ) {
+            if ($consumer->find_attribute_by_name($methodname)) {
             
-            after $methodname => sub {
-                my $self = shift;
-                $self->_notify(\@_, $methodname) if (@_);
-            };
+                after $methodname => sub {
+                    my $self = shift;
+                    $self->_notify(\@_, $methodname) if (@_);
+                };
             
-        } else {
+            } else {
+
+                after $methodname => sub {
+                    my $self = shift;
+                    $self->_notify(\@_, $methodname);
+                };
             
-            after $methodname => sub {
-                my $self = shift;
-                $self->_notify(\@_, $methodname);
-            };
-            
+            }
+        }
+        elsif ( $consumer->isa('Moose::Meta::Role') ) {
+            $consumer->add_after_method_modifier(
+                $methodname,
+                sub {
+                    my $self = shift;
+                    $self->_notify( \@_, $methodname );
+                }
+            );
         }
     }
     
@@ -82,7 +93,7 @@ MooseX::Observer::Role::Observable - Adds methods an logic to a class, enabling 
 
 =head1 VERSION
 
-version 0.007
+version 0.008
 
 =head1 SYNOPSIS
 
@@ -176,8 +187,6 @@ Removes all observers from the object.
 
 This private method notifies all observers, passing $self, $args and an
 $eventname to the observers' update method.
-
-=cut
 
 =head1 INSTALLATION
 

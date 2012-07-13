@@ -16,6 +16,7 @@ t/03_inheritance.t
 t/04_multipleobservers.t
 t/05_args.t
 t/06_remove.t
+t/07_role.t
 t/release-pod-coverage.t
 t/release-pod-syntax.t
 weaver.ini

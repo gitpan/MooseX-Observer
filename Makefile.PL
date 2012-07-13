@@ -12,6 +12,7 @@ my %WriteMakefileArgs = (
   "ABSTRACT" => "Simple Moose-Roles to implement the Observer Pattern",
   "AUTHOR" => "Thomas M\374ller <tmueller\@cpan.org>",
   "BUILD_REQUIRES" => {
+    "Counter::Role" => 0,
     "Moose" => 0,
     "Test::More" => 0,
     "strict" => 0,
@@ -30,7 +31,7 @@ my %WriteMakefileArgs = (
     "Moose::Util::TypeConstraints" => 0,
     "MooseX::Role::Parameterized" => 0
   },
-  "VERSION" => "0.007",
+  "VERSION" => "0.008",
   "test" => {
     "TESTS" => "t/*.t"
   }
