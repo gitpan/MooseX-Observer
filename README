@@ -2,7 +2,7 @@ NAME
     MooseX::Observer - Simple Moose-Roles to implement the Observer Pattern
 
 VERSION
-    version 0.009
+    version 0.010
 
 SYNOPSIS
         ############################################################################

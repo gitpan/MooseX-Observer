@@ -1,6 +1,6 @@
 package MooseX::Observer::Role::Observable;
 {
-  $MooseX::Observer::Role::Observable::VERSION = '0.009';
+  $MooseX::Observer::Role::Observable::VERSION = '0.010';
 }
 # ABSTRACT: Adds methods an logic to a class, enabling instances changes to be observed
 
@@ -93,7 +93,7 @@ MooseX::Observer::Role::Observable - Adds methods an logic to a class, enabling 
 
 =head1 VERSION
 
-version 0.009
+version 0.010
 
 =head1 SYNOPSIS
 
